@@ -1,10 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js.js"></script>
 </head>
-<body>
-$END$
+<body >
+<h1>Bestilling av kinobiletter</h1>
+<form id="form">
+    Velg Film: <select id="slecetFilm">
+
+    <option value="Film-1">Film-1</option>
+    <option value="Film-2">Film-2</option>
+    <option value="Film-3">Film-3</option>
+    <option value="Film-4">Film-4</option>
+    <option value="Film-5">Film-5</option>
+</select><br><br>
+    Antall : <input id="antall" type="number" min="1" style="width: 30px"><span id="feilMeldingAntall" style="color: red"></span><br><br>
+    fornavn : <input id="fornavn" type="text"><span id="feilMeldingFornavn" style="color: red"></span><br>
+    etternavn : <input id="etternavn" type="text"><span id="feilMeldingEtternavn" style="color: red"></span><br>
+    telefonnr : <input id="telefonnr" type="tel" pattern="[0-9]{8}" required><span id="feilMeldingTlfnr" style="color: red"></span><br>
+    Email : <input id="email" type="text"><span id="feilMeldingEmail" style="color: red"></span><br><br>
+</form>
+<button onclick="valition()" value="">Kjøp bilett</button>
+<br><br>
+<h3>Alle Billetter</h3>
+<table>
+    <thead>
+    <th>Film</th>
+    <th>Antall</th>
+    <th>Fornavn</th>
+    <th>Etternavn</th>
+    <th>TelefonNr</th>
+    <th>Email</th>
+    </thead>
+    <tbody id="table">
+
+    </tbody>
+</table>
+<button onclick="slett()">Slett alle billettene</button>
 </body>
 </html>
